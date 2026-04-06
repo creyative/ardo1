@@ -32,10 +32,10 @@ export default function Home() {
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-600">Sistem Ujian Online</p>
                 <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
-                  Ujian digital cepat, aman, dan nyaman untuk perangkat mobile.
+                  Assessment digital untuk rekrutmen dan evaluasi karyawan.
                 </h1>
                 <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                  Ikuti tes wawasan dan psikotes dengan pengalaman aplikasi modern, hasil otomatis, dan tampilan responsif yang nyaman di semua layar.
+                  Lakukan tes wawasan dan psikotes dengan platform modern, hasil real-time, dan interface yang responsif di semua perangkat.
                 </p>
               </div>
 
@@ -62,7 +62,7 @@ export default function Home() {
                 </div>
                 <h2 className="mt-5 text-xl font-semibold text-slate-900">Mobile Friendly</h2>
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                  Desain fleksibel untuk HP, tablet, dan desktop agar peserta nyaman mengerjakan soal.
+                  Desain fleksibel untuk HP, tablet, dan desktop agar karyawan nyaman mengerjakan assessment.
                 </p>
               </div>
 
@@ -72,7 +72,7 @@ export default function Home() {
                 </div>
                 <h2 className="mt-5 text-xl font-semibold text-slate-900">Keamanan Lengkap</h2>
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                  Proteksi data dan sesi ujian yang lebih aman untuk sekolah dan peserta.
+                  Proteksi data dan sesi assessment yang lebih aman untuk perusahaan dan kandidat.
                 </p>
               </div>
 
@@ -82,15 +82,15 @@ export default function Home() {
                 </div>
                 <h2 className="mt-5 text-xl font-semibold text-slate-900">Hasil Otomatis</h2>
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                  Laporan cepat dan terstruktur sehingga guru bisa langsung melihat performa peserta.
+                  Laporan cepat dan terstruktur sehingga HR bisa langsung melihat performa kandidat.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="mt-10 rounded-3xl border border-slate-200 bg-white/90 p-6 text-center shadow-[0_20px_60px_rgba(15,23,42,0.06)] backdrop-blur-xl sm:p-8">
-            <p className="text-sm uppercase tracking-[0.3em] text-sky-600">Aplikasi modern untuk ujian online</p>
-            <p className="mt-4 text-lg font-semibold text-slate-900 sm:text-xl">Setiap siswa mendapatkan pengalaman yang intuitif, cepat, dan mudah diakses dari mana saja.</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-sky-600">Aplikasi modern untuk assessment online</p>
+            <p className="mt-4 text-lg font-semibold text-slate-900 sm:text-xl">Setiap karyawan mendapatkan pengalaman yang intuitif, cepat, dan mudah diakses dari mana saja.</p>
             <p className="mt-3 text-sm leading-6 text-slate-600">Sistem sudah siap untuk digunakan di Vercel dengan deployment otomatis dari Git.</p>
           </div>
         </div>
