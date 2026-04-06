@@ -39,18 +39,12 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <div className="flex justify-center">
                 <Link
                   href="/exam/join"
                   className="inline-flex items-center justify-center rounded-full bg-sky-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-sky-600/30 transition hover:bg-sky-700"
                 >
                   Mulai Ujian
-                </Link>
-                <Link
-                  href="/admin/login"
-                  className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-8 py-4 text-base font-semibold text-slate-700 shadow-sm transition hover:border-slate-300"
-                >
-                  Admin Login
                 </Link>
               </div>
             </div>
