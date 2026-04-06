@@ -5,6 +5,16 @@ import { Providers } from '@/components/providers'
 export const metadata: Metadata = {
   title: 'Sistem Ujian Online',
   description: 'Platform ujian wawasan dan psikotest',
+  viewport: { width: 'device-width', initialScale: 1, viewportFit: 'cover' },
+  themeColor: '#2563eb',
+  icons: {
+    icon: [
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' }
+    ],
+    apple: [{ url: '/apple-touch-icon.png' }]
+  },
+  manifest: '/manifest.webmanifest',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
