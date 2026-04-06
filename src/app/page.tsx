@@ -88,11 +88,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-10 rounded-3xl border border-slate-200 bg-white/90 p-6 text-center shadow-[0_20px_60px_rgba(15,23,42,0.06)] backdrop-blur-xl sm:p-8">
-            <p className="text-sm uppercase tracking-[0.3em] text-sky-600">Aplikasi modern untuk assessment online</p>
-            <p className="mt-4 text-lg font-semibold text-slate-900 sm:text-xl">Setiap karyawan mendapatkan pengalaman yang intuitif, cepat, dan mudah diakses dari mana saja.</p>
-            <p className="mt-3 text-sm leading-6 text-slate-600">Sistem sudah siap untuk digunakan di Vercel dengan deployment otomatis dari Git.</p>
-          </div>
+          <footer className="mt-14 text-center text-sm text-slate-500">
+            © 2026 Eduardo. All rights reserved.
+          </footer>
         </div>
       </div>
     </main>
