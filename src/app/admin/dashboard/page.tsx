@@ -34,7 +34,7 @@ export default function DashboardPage() {
             <div>
               <h1 className="text-3xl font-bold text-slate-950 sm:text-4xl">Dashboard Admin</h1>
               <p className="mt-3 text-sm text-slate-600 sm:text-base">
-                Ringkasan cepat sesi, peserta, dan hasil assessment untuk karyawan.
+                Driving organizational excellence through digitalized assessments for training enrollment, role alignment, and workforce evaluation within ASL Group.
               </p>
             </div>
             <div className="inline-flex rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700">
