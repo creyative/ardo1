@@ -78,7 +78,7 @@ export default function NewParticipantPage() {
           </div>
           <div className="bg-white rounded-xl shadow overflow-hidden">
             <div className="px-6 py-4 border-b flex justify-between items-center">
-              <h2 className="font-semibold">Data Peserta</h2>
+              <h2 className="font-semibold text-gray-900">Data Peserta</h2>
               <button type="button" onClick={addRow} className="text-sm text-blue-600 hover:underline">+ Tambah Baris</button>
             </div>
             <div className="overflow-x-auto">

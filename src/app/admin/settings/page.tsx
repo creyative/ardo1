@@ -91,7 +91,7 @@ export default function SettingsPage() {
         <form onSubmit={handleSave} className="space-y-6">
           {/* Logo */}
           <div className="bg-white rounded-xl shadow p-6">
-            <h2 className="font-semibold mb-4">Logo Perusahaan</h2>
+            <h2 className="font-semibold mb-4 text-gray-900">Logo Perusahaan</h2>
             <div className="flex items-center gap-6">
               <div className="w-24 h-24 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center overflow-hidden bg-gray-50">
                 {logoPreview ? (
@@ -119,7 +119,7 @@ export default function SettingsPage() {
 
           {/* Favicon */}
           <div className="bg-white rounded-xl shadow p-6">
-            <h2 className="font-semibold mb-4">Favicon Perusahaan</h2>
+            <h2 className="font-semibold mb-4 text-gray-900">Favicon Perusahaan</h2>
             <div className="flex items-center gap-6">
               <div className="w-16 h-16 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center overflow-hidden bg-gray-50">
                 {faviconPreview ? (
@@ -147,7 +147,7 @@ export default function SettingsPage() {
 
           {/* Warna Sidebar */}
           <div className="bg-white rounded-xl shadow p-6 space-y-4">
-            <h2 className="font-semibold mb-4">Warna Sidebar Admin</h2>
+            <h2 className="font-semibold mb-4 text-gray-900">Warna Sidebar Admin</h2>
             <p className="text-sm text-gray-500 mb-3">Pilih warna yang sesuai dengan logo perusahaan Anda:</p>
             <div className="grid grid-cols-3 gap-3">
               {[
@@ -174,7 +174,7 @@ export default function SettingsPage() {
 
           {/* Info Perusahaan */}
           <div className="bg-white rounded-xl shadow p-6 space-y-4">
-            <h2 className="font-semibold mb-2">Informasi Perusahaan</h2>
+            <h2 className="font-semibold mb-2 text-gray-900">Informasi Perusahaan</h2>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Nama Perusahaan / Instansi <span className="text-red-500">*</span></label>
               <input type="text" value={form.company_name} onChange={e => setForm({ ...form, company_name: e.target.value })}

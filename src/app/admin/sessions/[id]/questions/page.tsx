@@ -170,7 +170,7 @@ export default function SessionQuestionsPage({ params }: { params: Promise<{ id:
 
         {/* Upload Section */}
         <div className="bg-white rounded-xl shadow p-6 mb-6">
-          <h2 className="font-semibold mb-4">Upload Soal dari Excel</h2>
+          <h2 className="font-semibold mb-4 text-gray-900">Upload Soal dari Excel</h2>
           <div className="flex gap-4 items-center mb-4 flex-wrap">
             <a href="/api/questions/template?type=wawasan"
               className="px-4 py-2 bg-green-50 text-green-600 rounded-lg text-sm hover:bg-green-100 border border-green-200">
@@ -191,7 +191,7 @@ export default function SessionQuestionsPage({ params }: { params: Promise<{ id:
         {/* Manual Add Section */}
         <div className="bg-white rounded-xl shadow p-6 mb-6">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="font-semibold">{editingQuestion ? 'Edit Soal' : 'Tambah Soal Manual'}</h2>
+            <h2 className="font-semibold text-gray-900">{editingQuestion ? 'Edit Soal' : 'Tambah Soal Manual'}</h2>
             <div className="flex gap-2">
               {editingQuestion && (
                 <button
@@ -311,7 +311,7 @@ export default function SessionQuestionsPage({ params }: { params: Promise<{ id:
         {/* Questions List */}
         <div className="bg-white rounded-xl shadow overflow-hidden">
           <div className="px-6 py-4 border-b">
-            <h2 className="font-semibold">Daftar Soal ({questions.length} soal)</h2>
+            <h2 className="font-semibold text-gray-900">Daftar Soal ({questions.length} soal)</h2>
           </div>
           <div className="divide-y max-h-96 overflow-auto">
             {questions.map((q: any, idx: number) => (
