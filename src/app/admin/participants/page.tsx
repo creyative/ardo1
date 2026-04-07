@@ -25,7 +25,7 @@ export default function ParticipantsPage() {
   const filtered = participants.filter(p =>
     p.name?.toLowerCase().includes(search.toLowerCase()) ||
     p.participant_code?.toLowerCase().includes(search.toLowerCase()) ||
-    p.nik?.includes(search)
+    p.birth_date?.toString().includes(search)
   )
 
   const exportCodes = () => {
@@ -43,7 +43,7 @@ export default function ParticipantsPage() {
       No: idx + 1,
       Nama: p.name,
       'Kode Peserta': p.participant_code,
-      NIK: p.nik || '-',
+      Tanggal Lahir: p.birth_date ? new Date(p.birth_date).toLocaleDateString('id-ID') : '-',
       Email: p.email || '-',
       Telepon: p.phone || '-',
       'Jenis Kelamin': p.gender || '-',
@@ -99,7 +99,7 @@ export default function ParticipantsPage() {
     doc.text(`Tipe Tes: ${sessionType}`, 40, 140)
     doc.text(`Skor Terakhir: ${score}`, 40, 160)
     doc.text(`Status: ${participant.status || '-'}`, 40, 180)
-    doc.text(`NIK: ${participant.nik || '-'}`, 40, 200)
+    doc.text(`Tanggal Lahir: ${participant.birth_date ? new Date(participant.birth_date).toLocaleDateString('id-ID') : '-'}`, 40, 200)
     doc.text(`Email: ${participant.email || '-'}`, 40, 220)
     doc.text(`Telepon: ${participant.phone || '-'}`, 40, 240)
 
@@ -118,7 +118,7 @@ export default function ParticipantsPage() {
           </div>
         </div>
         <div className="mb-4">
-          <input type="text" placeholder="Cari nama, kode, atau NIK..." value={search} onChange={e => setSearch(e.target.value)}
+          <input type="text" placeholder="Cari nama, kode, atau tanggal lahir..." value={search} onChange={e => setSearch(e.target.value)}
             className="w-full md:w-96 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
         <div className="bg-white rounded-xl shadow overflow-hidden">
@@ -131,7 +131,7 @@ export default function ParticipantsPage() {
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Tipe Tes</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Skor Terakhir</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">NIK</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Tanggal Lahir</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Aksi</th>
               </tr>
             </thead>
@@ -158,7 +158,7 @@ export default function ParticipantsPage() {
                       {p.status === 'finished' ? 'Selesai' : p.status === 'in_progress' ? 'Sedang Tes' : 'Terdaftar'}
                     </span>
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-600">{p.nik || '-'}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">{p.birth_date ? new Date(p.birth_date).toLocaleDateString('id-ID') : '-'}</td>
                   <td className="px-6 py-4">
                     <div className="flex gap-2">
                       <button onClick={() => exportParticipantPdf(p)} className="text-blue-600 hover:underline text-sm">Cetak</button>

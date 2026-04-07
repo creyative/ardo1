@@ -7,7 +7,7 @@ export default function NewParticipantPage() {
   const router = useRouter()
   const [sessions, setSessions] = useState<any[]>([])
   const [sessionId, setSessionId] = useState('')
-  const [participants, setParticipants] = useState([{ name: '', nik: '', email: '', phone: '', gender: '', education: '', position: '' }])
+  const [participants, setParticipants] = useState([{ name: '', birth_date: '', email: '', phone: '', gender: '', education: '', position: '' }])
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<any[]>([])
 
@@ -15,7 +15,7 @@ export default function NewParticipantPage() {
     fetch('/api/sessions').then(r => r.json()).then(d => setSessions(Array.isArray(d) ? d : []))
   }, [])
 
-  const addRow = () => setParticipants([...participants, { name: '', nik: '', email: '', phone: '', gender: '', education: '', position: '' }])
+  const addRow = () => setParticipants([...participants, { name: '', birth_date: '', email: '', phone: '', gender: '', education: '', position: '' }])
   const updateRow = (i: number, field: string, value: string) => {
     const updated = [...participants]
     updated[i] = { ...updated[i], [field]: value }
@@ -53,7 +53,7 @@ export default function NewParticipantPage() {
             ))}
           </div>
           <div className="flex gap-3">
-            <button onClick={() => { setResult([]); setParticipants([{ name: '', nik: '', email: '', phone: '', gender: '', education: '', position: '' }]) }}
+            <button onClick={() => { setResult([]); setParticipants([{ name: '', birth_date: '', email: '', phone: '', gender: '', education: '', position: '' }]) }}
               className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Tambah Lagi</button>
             <button onClick={() => router.push('/admin/participants')}
               className="px-4 py-2 border rounded-lg text-gray-600 hover:bg-gray-50">Ke Daftar Peserta</button>
@@ -86,7 +86,7 @@ export default function NewParticipantPage() {
                 <thead className="bg-gray-50">
                   <tr>
                     <th className="px-3 py-2 text-left font-medium text-gray-600">Nama*</th>
-                    <th className="px-3 py-2 text-left font-medium text-gray-600">NIK</th>
+                    <th className="px-3 py-2 text-left font-medium text-gray-600">Tanggal Lahir</th>
                     <th className="px-3 py-2 text-left font-medium text-gray-600">Email</th>
                     <th className="px-3 py-2 text-left font-medium text-gray-600">Telepon</th>
                     <th className="px-3 py-2 text-left font-medium text-gray-600">Jenis Kelamin</th>
@@ -98,7 +98,7 @@ export default function NewParticipantPage() {
                 <tbody className="divide-y">
                   {participants.map((p, i) => (
                     <tr key={i}>
-                      {(['name', 'nik', 'email', 'phone'] as const).map(f => (
+                      {(['name', 'birth_date', 'email', 'phone'] as const).map(f => (
                         <td key={f} className="px-3 py-2">
                           <input type="text" value={(p as any)[f]} onChange={e => updateRow(i, f, e.target.value)}
                             className="w-full border rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
