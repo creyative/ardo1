@@ -43,6 +43,27 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       .catch(() => setMounted(true))
   }, [])
 
+  useEffect(() => {
+    const inactivityTimeout = 5 * 60 * 1000
+    let timer: ReturnType<typeof setTimeout>
+
+    const resetTimer = () => {
+      if (timer) clearTimeout(timer)
+      timer = setTimeout(() => {
+        signOut({ callbackUrl: '/admin/login' })
+      }, inactivityTimeout)
+    }
+
+    const events = ['mousemove', 'mousedown', 'keydown', 'touchstart', 'scroll']
+    events.forEach(eventName => window.addEventListener(eventName, resetTimer))
+    resetTimer()
+
+    return () => {
+      if (timer) clearTimeout(timer)
+      events.forEach(eventName => window.removeEventListener(eventName, resetTimer))
+    }
+  }, [])
+
   const colorClasses = {
     'blue': { bg: 'bg-blue-600', text: 'text-blue-600', lightBg: 'bg-blue-50', border: 'border-blue-200' },
     'purple': { bg: 'bg-purple-600', text: 'text-purple-600', lightBg: 'bg-purple-50', border: 'border-purple-200' },
@@ -78,8 +99,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </nav>
           <div className="mt-auto p-4 border-t border-white/20">
             <p className="text-xs text-white/70 mb-2 truncate">{session?.user?.name || 'Admin'}</p>
+          <p className="text-xs text-white/60 mb-3">Logout otomatis setelah 5 menit tidak aktif.</p>
             <button
-              onClick={() => signOut({ callbackUrl: '/' })}
+              onClick={() => signOut({ callbackUrl: '/admin/login' })}
               className="w-full rounded-lg bg-white/15 px-3 py-2 text-sm font-medium text-white hover:bg-white/25 transition-colors"
             >
               Keluar

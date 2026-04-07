@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
   const rows = results.map((r: any, idx: number) => ({
     No: idx + 1,
     Nama: r.participants?.name,
-    NIK: r.participants?.birth_date,
+    'Tanggal Lahir': r.participants?.birth_date,
     Email: r.participants?.email,
     'Kode Peserta': r.participants?.participant_code,
     Sesi: r.participants?.sessions?.name,
