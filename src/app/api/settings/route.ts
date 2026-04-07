@@ -42,6 +42,7 @@ export async function PUT(req: NextRequest) {
     logo_url: body.logo_url || '',
     favicon_url: body.favicon_url || '',
     primary_color: body.primary_color || 'blue',
+    headline: body.headline || 'Assessment digital untuk rekrutmen dan evaluasi karyawan.',
   }
 
   const saveSettings = async (data: Record<string, any>) => {
@@ -70,6 +71,9 @@ export async function PUT(req: NextRequest) {
     }
     if (message.includes('primary_color')) {
       return NextResponse.json({ error: 'Kolom primary_color tidak ditemukan di database. Jalankan migrasi Supabase agar warna sidebar dapat tersimpan.' }, { status: 500 })
+    }
+    if (message.includes('headline')) {
+      return NextResponse.json({ error: 'Kolom headline tidak ditemukan di database. Jalankan migrasi Supabase agar headline dapat tersimpan.' }, { status: 500 })
     }
     return NextResponse.json({ error: result.error.message }, { status: 500 })
   }
