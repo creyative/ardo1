@@ -123,7 +123,7 @@ export default function TestPage() {
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center text-white space-y-4">
-          <h1 className="text-3xl font-bold">Siap Memulai?</h1>
+          <h1 className="text-3xl font-bold text-white">Siap Memulai?</h1>
           <p className="text-gray-400">Ujian akan dimulai dalam mode fullscreen</p>
           <button onClick={handleStart}
             className="px-8 py-4 bg-blue-600 text-white rounded-xl text-lg font-semibold hover:bg-blue-700">
