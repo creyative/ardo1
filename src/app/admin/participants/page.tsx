@@ -43,7 +43,7 @@ export default function ParticipantsPage() {
       No: idx + 1,
       Nama: p.name,
       'Kode Peserta': p.participant_code,
-      Tanggal Lahir: p.birth_date ? new Date(p.birth_date).toLocaleDateString('id-ID') : '-',
+      'Tanggal Lahir': p.birth_date ? new Date(p.birth_date).toLocaleDateString('id-ID') : '-',
       Email: p.email || '-',
       Telepon: p.phone || '-',
       'Jenis Kelamin': p.gender || '-',
