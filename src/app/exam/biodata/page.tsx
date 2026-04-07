@@ -28,7 +28,7 @@ export default function BiodataPage() {
         <div className="space-y-3 mb-6">
           {[
             ['Nama', participant.name],
-            ['NIK', participant.nik || '-'],
+            ['Tanggal Lahir', participant.birth_date || '-'],
             ['Email', participant.email || '-'],
             ['Telepon', participant.phone || '-'],
             ['Jenis Kelamin', participant.gender || '-'],

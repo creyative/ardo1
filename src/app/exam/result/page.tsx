@@ -68,7 +68,7 @@ function ResultContent() {
           <div className="grid grid-cols-2 gap-4 mb-6">
             {[
               ['Nama', participant?.name],
-              ['NIK', participant?.nik || '-'],
+              ['Tanggal Lahir', participant?.birth_date || '-'],
               ['Email', participant?.email || '-'],
               ['Telepon', participant?.phone || '-'],
               ['Jenis Kelamin', participant?.gender || '-'],
