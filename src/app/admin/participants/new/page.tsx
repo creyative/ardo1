@@ -100,9 +100,13 @@ export default function NewParticipantPage() {
                     <tr key={i}>
                       {(['name', 'birth_date', 'email', 'phone'] as const).map(f => (
                         <td key={f} className="px-3 py-2">
-                          <input type="text" value={(p as any)[f]} onChange={e => updateRow(i, f, e.target.value)}
+                          <input
+                            type={f === 'birth_date' ? 'date' : 'text'}
+                            value={(p as any)[f] || ''}
+                            onChange={e => updateRow(i, f, e.target.value)}
                             className="w-full border rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
-                            required={f === 'name'} />
+                            required={f === 'name'}
+                          />
                         </td>
                       ))}
                       <td className="px-3 py-2">
