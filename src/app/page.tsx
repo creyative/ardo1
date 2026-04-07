@@ -32,7 +32,7 @@ export default function Home() {
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-600">Sistem Ujian Online</p>
                 <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
-                  Assessment digital untuk rekrutmen dan evaluasi karyawan.
+                  Driving organizational excellence through digitalized assessments for training enrollment, role alignment, and workforce evaluation within ASL Group.
                 </h1>
                 <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
                   Lakukan tes wawasan dan psikotes dengan platform modern, hasil real-time, dan interface yang responsif di semua perangkat.
