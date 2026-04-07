@@ -43,6 +43,7 @@ export async function PUT(req: NextRequest) {
     favicon_url: body.favicon_url || '',
     primary_color: body.primary_color || 'blue',
     headline: body.headline || 'Assessment digital untuk rekrutmen dan evaluasi karyawan.',
+    headline_size: body.headline_size || 'text-4xl',
   }
 
   const saveSettings = async (data: Record<string, any>) => {
@@ -74,6 +75,9 @@ export async function PUT(req: NextRequest) {
     }
     if (message.includes('headline')) {
       return NextResponse.json({ error: 'Kolom headline tidak ditemukan di database. Jalankan migrasi Supabase agar headline dapat tersimpan.' }, { status: 500 })
+    }
+    if (message.includes('headline_size')) {
+      return NextResponse.json({ error: 'Kolom headline_size tidak ditemukan di database. Jalankan migrasi Supabase agar ukuran headline dapat tersimpan.' }, { status: 500 })
     }
     return NextResponse.json({ error: result.error.message }, { status: 500 })
   }

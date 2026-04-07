@@ -6,6 +6,7 @@ import { CheckCircle2, ShieldCheck, Smartphone } from 'lucide-react'
 export default function Home() {
   const [logo, setLogo] = useState('')
   const [headline, setHeadline] = useState('Driving organizational excellence through digitalized assessments for training enrollment, role alignment, and workforce evaluation within ASL Group.')
+  const [headlineSize, setHeadlineSize] = useState('text-4xl')
 
   useEffect(() => {
     fetch('/api/settings')
@@ -13,6 +14,7 @@ export default function Home() {
       .then(d => {
         if (d.logo_url) setLogo(d.logo_url)
         if (d.headline) setHeadline(d.headline)
+        if (d.headline_size) setHeadlineSize(d.headline_size)
       })
   }, [])
 
@@ -33,7 +35,7 @@ export default function Home() {
 
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-600">Sistem Ujian Online</p>
-                <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
+                <h1 className={`mt-5 font-bold tracking-tight text-slate-950 sm:${headlineSize.replace('text-', 'sm:text-').replace('xl', 'xl')} ${headlineSize}`}>
                   {headline}
                 </h1>
                 <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">

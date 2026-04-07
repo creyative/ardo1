@@ -175,16 +175,33 @@ export default function SettingsPage() {
           {/* Headline Landing Page */}
           <div className="bg-white rounded-xl shadow p-6">
             <h2 className="font-semibold mb-4 text-gray-900">Headline Halaman Depan</h2>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Headline Utama</label>
-              <textarea
-                value={form.headline}
-                onChange={e => setForm({ ...form, headline: e.target.value })}
-                rows={3}
-                className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Masukkan headline yang akan ditampilkan di halaman depan..."
-              />
-              <p className="text-xs text-gray-500 mt-1">Headline ini akan muncul sebagai judul utama di landing page website.</p>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Headline Utama</label>
+                <textarea
+                  value={form.headline}
+                  onChange={e => setForm({ ...form, headline: e.target.value })}
+                  rows={3}
+                  className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Masukkan headline yang akan ditampilkan di halaman depan..."
+                />
+                <p className="text-xs text-gray-500 mt-1">Headline ini akan muncul sebagai judul utama di landing page website.</p>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Ukuran Headline</label>
+                <select
+                  value={form.headline_size}
+                  onChange={e => setForm({ ...form, headline_size: e.target.value })}
+                  className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="text-2xl">Kecil (text-2xl)</option>
+                  <option value="text-3xl">Sedang (text-3xl)</option>
+                  <option value="text-4xl">Besar (text-4xl)</option>
+                  <option value="text-5xl">Sangat Besar (text-5xl)</option>
+                  <option value="text-6xl">Ekstra Besar (text-6xl)</option>
+                </select>
+                <p className="text-xs text-gray-500 mt-1">Pilih ukuran font untuk headline.</p>
+              </div>
             </div>
           </div>
 
